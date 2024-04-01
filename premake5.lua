@@ -3,8 +3,8 @@ project "ImGui"
 	language "C++"
     staticruntime "off"
 
-	targetdir "%{wks.location}/Library/%{cfg.buildcfg}"
-	objdir ("Intermediate")
+	targetdir "Bin/%{cfg.buildcfg}"
+	objdir "Intermediate/%{cfg.buildcfg}"
 	
 	files
 	{
@@ -37,8 +37,3 @@ project "ImGui"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
-
-    filter "configurations:Dist"
-		runtime "Release"
-		optimize "on"
-        symbols "off"
